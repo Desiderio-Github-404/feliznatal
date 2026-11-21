@@ -38,6 +38,22 @@
       action.setAttribute("aria-disabled", "true");
     }
     copy.append(title, description, action);
+    (item.extraLinks || []).forEach(extra => {
+      const extraUrl = safeUrl(extra.url);
+      const extraAction = document.createElement(extraUrl ? "a" : "span");
+      extraAction.className = "action-link" + (extraUrl ? "" : " disabled");
+      extraAction.textContent = extraUrl ? (extra.name || "Abrir vídeo") + " ↗" : "Em breve";
+      if (extraUrl) {
+        extraAction.href = extraUrl;
+        extraAction.target = "_blank";
+        extraAction.rel = "noopener noreferrer";
+      } else {
+        extraAction.setAttribute("aria-disabled", "true");
+      }
+      extraAction.style.marginTop = "7px";
+      extraAction.style.marginRight = "6px";
+      copy.append(extraAction);
+    });
     article.append(icon, copy);
     return article;
   }
@@ -68,7 +84,7 @@
       const url = safeUrl(item.url);
       const trailer = document.createElement(url ? "a" : "span");
       trailer.className = "action-link" + (url ? "" : " disabled");
-      trailer.textContent = url ? "Ver trailer ↗" : "Em breve";
+      trailer.textContent = url ? (item.buttonLabel || "Ver trailer ↗") : "Em breve";
       if (url) {
         trailer.href = url;
         trailer.target = "_blank";
