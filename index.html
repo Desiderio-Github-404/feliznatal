@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="style.css">
   <script src="links.js" defer></script>
   <script src="app.js" defer></script>
+  <script src="budget.js" defer></script>
 </head>
 <body>
   <div class="topline" aria-hidden="true"></div>
@@ -53,10 +54,40 @@
     <section class="section bonus-section" id="bonus">
       <div class="section-heading">
         <p class="eyebrow">PEQUENOS EXTRAS, GRANDES MOMENTOS</p>
-        <h2>Bónus do Drive</h2>
-        <p>Materiais de apoio para organizar e celebrar sem complicações.</p>
+        <h2>Bónus especiais</h2>
+        <p>Recursos e ferramentas para organizar e celebrar sem complicações.</p>
       </div>
       <div class="bonus-grid" id="bonus-list"></div>
+    </section>
+
+
+    <section class="section budget-section" id="orcamento">
+      <div class="section-heading"><p class="eyebrow">PLANEIA COM INTELIGÊNCIA</p><h2>Planeador de Orçamento de Natal</h2><p>Define o teu limite, distribui os gastos e acompanha o saldo em kwanzas. Os teus dados ficam guardados apenas neste dispositivo.</p></div>
+      <div class="budget-shell">
+        <div class="budget-intro"><div><span class="budget-kicker">O TEU PLANO NATALÍCIO</span><h3>Um Natal especial, sem perder o controlo.</h3></div><span class="budget-intro-icon" aria-hidden="true">🎄</span></div>
+        <div class="budget-total-field"><label for="budget-limit">Quanto tens disponível? (Kz)</label><input id="budget-limit" type="number" min="0" step="500" inputmode="numeric" placeholder="Ex.: 100000"></div>
+        <div class="scenario-area"><p class="budget-label">Escolhe um ponto de partida</p><div class="scenario-buttons"><button type="button" data-scenario="economico">Económico</button><button type="button" data-scenario="equilibrado" class="selected">Equilibrado</button><button type="button" data-scenario="especial">Especial</button></div><p class="budget-hint">Os cenários são sugestões de distribuição. Podes alterar todos os valores.</p></div>
+        <div class="budget-summary" aria-live="polite"><div><span>Orçamento disponível</span><strong id="budget-limit-display">0 Kz</strong></div><div><span>Total planeado</span><strong id="budget-spent">0 Kz</strong></div><div class="budget-balance"><span id="budget-balance-label">Saldo restante</span><strong id="budget-balance">0 Kz</strong></div><div class="budget-progress"><div id="budget-progress-fill"></div></div><p id="budget-status">Define o teu orçamento para começar.</p></div>
+        <div class="budget-expenses"><div class="budget-subheading"><div><h3>Distribuição das despesas</h3><p>Insere o valor máximo que pretendes gastar em cada categoria.</p></div><span>AOA</span></div><div id="budget-category-list">
+          <label class="budget-row"><span>🍲 Ceia e alimentação</span><input type="number" min="0" step="500" data-budget-category="ceia" inputmode="numeric" placeholder="0"></label>
+          <label class="budget-row"><span>🎁 Presentes</span><input type="number" min="0" step="500" data-budget-category="presentes" inputmode="numeric" placeholder="0"></label>
+          <label class="budget-row"><span>🥤 Bebidas e sobremesas</span><input type="number" min="0" step="500" data-budget-category="bebidas" inputmode="numeric" placeholder="0"></label>
+          <label class="budget-row"><span>🎄 Decoração</span><input type="number" min="0" step="500" data-budget-category="decoracao" inputmode="numeric" placeholder="0"></label>
+          <label class="budget-row"><span>🎉 Actividades e transporte</span><input type="number" min="0" step="500" data-budget-category="actividades" inputmode="numeric" placeholder="0"></label>
+          <label class="budget-row"><span>🪙 Reserva para imprevistos</span><input type="number" min="0" step="500" data-budget-category="reserva" inputmode="numeric" placeholder="0"></label>
+        </div></div>
+        <div class="budget-actions"><button type="button" class="budget-primary" id="budget-save">Guardar orçamento</button><button type="button" class="budget-secondary" id="budget-export">Exportar resumo</button><button type="button" class="budget-reset" id="budget-reset">Limpar valores</button></div>
+        <p class="budget-save-note" id="budget-save-note" aria-live="polite">O orçamento é guardado neste dispositivo quando seleccionas “Guardar orçamento”.</p>
+      </div>
+      <div class="saving-guide"><div class="section-heading"><p class="eyebrow">DINHEIRO BEM GERIDO</p><h2>5 formas de poupar neste Natal</h2><p>Pequenas decisões podem fazer uma grande diferença.</p></div>
+        <div class="saving-tips">
+          <article><span>01</span><div><h3>Define um limite antes de comprar</h3><p>Decide quanto podes gastar e evita ultrapassar esse valor, mesmo quando surgirem promoções.</p></div></article>
+          <article><span>02</span><div><h3>Compara preços em diferentes lojas</h3><p>Verifica os preços no mercado, supermercado e comércio local antes de escolher onde comprar.</p></div></article>
+          <article><span>03</span><div><h3>Planeia a ceia com antecedência</h3><p>Escolhe o menu, calcula as quantidades e aproveita ingredientes que já tens em casa.</p></div></article>
+          <article><span>04</span><div><h3>Combina presentes com criatividade</h3><p>Estabelece um limite por pessoa. Um presente simples e pensado pode valer mais do que um presente caro.</p></div></article>
+          <article><span>05</span><div><h3>Protege a tua reserva</h3><p>Separa algum dinheiro para imprevistos e não o uses para despesas que já estavam previstas.</p></div></article>
+        </div><p class="saving-reminder">Lembra-te: o valor do Natal está na união e na partilha, não no dinheiro gasto.</p>
+      </div>
     </section>
 
     <section class="section checklist-section" id="checklist">
