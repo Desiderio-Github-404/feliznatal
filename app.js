@@ -26,10 +26,14 @@
     const description = document.createElement("p");
     description.textContent = item.description || "";
     const url = safeUrl(item.url);
-    const action = document.createElement(url ? "a" : "span");
-    action.className = "action-link" + (url ? "" : " disabled");
-    action.textContent = url ? (item.id.startsWith("trailer_") ? "Ver trailer ↗" : "Abrir conteúdo ↗") : "Em breve";
-    if (url) {
+    const internalBudget = item.id === "bonus_orcamento_sheets";
+    const action = document.createElement(url || internalBudget ? "a" : "span");
+    action.className = "action-link" + (url || internalBudget ? "" : " disabled");
+    action.textContent = internalBudget ? "Planear agora ↓" : (url ? (item.id.startsWith("trailer_") ? "Ver trailer ↗" : "Abrir conteúdo ↗") : "Em breve");
+    if (internalBudget) {
+      action.href = "#orcamento";
+      action.setAttribute("aria-label", "Abrir o planeador de orçamento de Natal");
+    } else if (url) {
       action.href = url;
       action.target = "_blank";
       action.rel = "noopener noreferrer";
