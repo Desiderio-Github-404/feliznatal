@@ -21,6 +21,10 @@ São aceites apenas links de `youtube.com`, `youtu.be`, `drive.google.com` e `do
 
 O planeador está implementado em `budget.js`, com estilos em `style.css`. Permite definir o orçamento em kwanzas, escolher cenários económico/equilibrado/especial, distribuir despesas, acompanhar o saldo, guardar os valores localmente e exportar um resumo CSV. Não utiliza Supabase, contas ou backend. Os dados ficam apenas no navegador/dispositivo através de `localStorage` e podem desaparecer se os dados do navegador forem apagados.
 
+## Estúdio de cartões de Natal
+
+O editor está implementado em `cards.js`, com estilos em `style.css`. Inclui oito modelos, personalização de destinatário, mensagem e assinatura, sugestões rápidas e exportação directa no navegador em PNG, JPEG e PDF. Não utiliza Supabase, contas, bibliotecas externas ou backend.
+
 ## Checklist
 
 O progresso da checklist é guardado localmente no próprio navegador/telemóvel através de `localStorage`. Se os dados do navegador forem apagados, o progresso também poderá desaparecer.
