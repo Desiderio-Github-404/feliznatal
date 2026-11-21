@@ -12,6 +12,7 @@
   <script src="links.js" defer></script>
   <script src="app.js" defer></script>
   <script src="budget.js" defer></script>
+  <script src="cards.js" defer></script>
 </head>
 <body>
   <div class="topline" aria-hidden="true"></div>
@@ -87,6 +88,37 @@
           <article><span>04</span><div><h3>Combina presentes com criatividade</h3><p>Estabelece um limite por pessoa. Um presente simples e pensado pode valer mais do que um presente caro.</p></div></article>
           <article><span>05</span><div><h3>Protege a tua reserva</h3><p>Separa algum dinheiro para imprevistos e não o uses para despesas que já estavam previstas.</p></div></article>
         </div><p class="saving-reminder">Lembra-te: o valor do Natal está na união e na partilha, não no dinheiro gasto.</p>
+      </div>
+    </section>
+
+
+    <section class="section cards-section" id="cartoes">
+      <div class="section-heading"><p class="eyebrow">PARTILHA CARINHO NESTE NATAL</p><h2>Estúdio de Cartões de Natal</h2><p>Cria um cartão personalizado, escolhe um modelo e guarda-o em imagem ou PDF para partilhar com quem mais amas.</p></div>
+      <div class="card-studio">
+        <div class="card-editor">
+          <div class="card-editor-heading"><span class="card-editor-icon">💌</span><div><h3>Personaliza o teu cartão</h3><p>Escolhe um estilo e escreve a tua mensagem.</p></div></div>
+          <label for="card-template">Modelo do cartão</label>
+          <select id="card-template" class="card-select">
+            <option value="classico">01 · Clássico — verde e dourado</option>
+            <option value="elegante">02 · Elegante — vermelho e dourado</option>
+            <option value="divertido">03 · Divertido — Natal alegre</option>
+            <option value="cristao">04 · Cristão — nascimento de Jesus</option>
+            <option value="minimal">05 · Minimalista — simples e moderno</option>
+            <option value="tropical">06 · Tropical — Natal com calor angolano</option>
+            <option value="familia">07 · Família — união e carinho</option>
+            <option value="noite">08 · Noite de Natal — azul e estrelas</option>
+          </select>
+          <label for="card-recipient">Nome de quem vai receber</label><input id="card-recipient" class="card-input" maxlength="48" placeholder="Ex.: Minha família" value="Minha família">
+          <label for="card-message">Mensagem</label><textarea id="card-message" class="card-textarea" maxlength="360" rows="5">Que este Natal seja repleto de amor, paz, união e bênçãos. Que nunca faltem motivos para sorrir!</textarea>
+          <label for="card-sender">Assinatura</label><input id="card-sender" class="card-input" maxlength="48" placeholder="Ex.: Com carinho" value="Com carinho">
+          <div class="card-presets"><span>Mensagens rápidas</span><div><button type="button" data-card-message="Que a alegria, a paz e o amor estejam presentes na tua casa neste Natal. Boas festas!">Afetuosa</button><button type="button" data-card-message="Que o nascimento de Jesus renove a tua fé, fortaleça a tua esperança e encha o teu lar de paz. Feliz Natal!">Cristã</button><button type="button" data-card-message="Que a união da família, a amizade e a partilha tornem este Natal inesquecível. Boas festas!">Família</button></div></div>
+        </div>
+        <div class="card-preview-area">
+          <div class="card-preview-heading"><h3>Pré-visualização</h3><span>Actualiza automaticamente</span></div>
+          <div class="card-canvas-wrap"><canvas id="christmas-card-canvas" width="1200" height="1600" role="img" aria-label="Pré-visualização do cartão de Natal personalizado"></canvas></div>
+          <div class="card-downloads"><button type="button" id="card-download-png" class="card-download-primary">Descarregar PNG</button><button type="button" id="card-download-jpg">Descarregar JPEG</button><button type="button" id="card-download-pdf">Descarregar PDF</button></div>
+          <p class="card-export-note" id="card-export-note" aria-live="polite">O cartão é criado no teu dispositivo. Não precisas de conta nem de enviar os teus dados.</p>
+        </div>
       </div>
     </section>
 
