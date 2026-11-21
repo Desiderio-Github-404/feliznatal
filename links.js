@@ -12,7 +12,7 @@ window.NATAL_LINKS = {
   ],
   films: [
     { id: "trailer_criancas", title: "Natal para Crianças", category: "Crianças", age: "A partir dos 3 anos", description: "Uma escolha divertida para os mais pequenos.", icon: "🧸", url: "" },
-    { id: "trailer_familia", title: "Natal em Família", category: "Família", age: "A partir dos 6 anos", description: "Histórias para assistir juntos.", icon: "🏡", url: "" },
+    { id: "trailer_familia", title: "Filmes de Natal em Família", category: "Família", age: "A partir dos 6 anos", description: "Filmes e uma playlist especial para reunir a família no Natal.", icon: "🏡", url: "https://youtube.com/playlist?list=PLVtndw4ZBKHV6YtMJZ3hVfjeLnXFcVhP4&si=VXRnFl3Sb7QstFej", extraLinks: [ { id: "trailer_familia_video_1", name: "Filme de Natal em Família 1", url: "https://youtu.be/mXm3IzkwhGc?si=lQiZXmU_RvDNGR3E" }, { id: "trailer_familia_video_2", name: "Filme de Natal em Família 2", url: "https://youtu.be/ihbR2JfqnR0?si=CDMeKv7fujrwOO8c" }, { id: "trailer_familia_video_3", name: "Filme de Natal em Família 3", url: "https://youtu.be/8LeOut2662g?si=xpWVilu8RKVyYEH7" } ] },
     { id: "trailer_comedia", title: "Comédias de Natal", category: "Comédia", age: "A partir dos 10 anos", description: "Boas gargalhadas para animar a noite.", icon: "😂", url: "" },
     { id: "trailer_classicos", title: "Esqueceram de Mim (1990)", category: "Clássicos", age: "A classificação varia", description: "Vídeo do clássico de Natal.", icon: "🎬", buttonLabel: "Abrir vídeo ↗", url: "https://youtu.be/ajsMaZxSBkA?si=DxhzSBcTpShGfIiR" }
   ],
