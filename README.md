@@ -17,6 +17,10 @@ Exemplo:
 
 São aceites apenas links de `youtube.com`, `youtu.be`, `drive.google.com` e `docs.google.com`. Links de outros domínios não serão activados. Os botões sem link mostram **Em breve**.
 
+## Planeador de orçamento
+
+O planeador está implementado em `budget.js`, com estilos em `style.css`. Permite definir o orçamento em kwanzas, escolher cenários económico/equilibrado/especial, distribuir despesas, acompanhar o saldo, guardar os valores localmente e exportar um resumo CSV. Não utiliza Supabase, contas ou backend. Os dados ficam apenas no navegador/dispositivo através de `localStorage` e podem desaparecer se os dados do navegador forem apagados.
+
 ## Checklist
 
 O progresso da checklist é guardado localmente no próprio navegador/telemóvel através de `localStorage`. Se os dados do navegador forem apagados, o progresso também poderá desaparecer.
