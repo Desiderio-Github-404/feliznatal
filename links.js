@@ -7,7 +7,7 @@ window.NATAL_LINKS = {
     { id: "playlist_instrumental", name: "Natal Instrumental", icon: "🎹", description: "Três seleções de música instrumental natalícia para criar um ambiente especial.", url: "https://youtube.com/playlist?list=PLBm7O-LjARXj0kqXC7xmPiD78mmBayB3g&si=Nh4NluDXngwTjvau", extraLinks: [ { id: "playlist_instrumental_video_1", name: "Instrumental Natal 1", url: "https://youtu.be/9DlD7-TykIU?si=JUgXyreLUb8qknrV" }, { id: "playlist_instrumental_video_2", name: "Instrumental Natal 2", url: "https://youtu.be/mxm_VhOLVI0?si=W7K7Ywr5Y-yjh-ch" } ] },
     { id: "playlist_criancas", name: "Natal das Crianças", icon: "🧸", description: "Canções alegres para os mais pequenos.", url: "" },
     { id: "playlist_festa_angolana", name: "Festa Angolana", icon: "🥁", description: "Kizomba natalícia para dar ritmo à celebração.", url: "https://youtu.be/f3GnkzDHj2E?si=lVE6G5PSFj3ltexb" },
-    { id: "playlist_gospel", name: "Natal Gospel", icon: "✨", description: "Louvor, fé e celebração.", url: "" },
+    { id: "playlist_gospel", name: "Natal Gospel", icon: "✨", description: "Selecção de músicas e compilações gospel para celebrar o Natal.", url: "https://youtube.com/playlist?list=PLnkieDfYiaprEeikItM1V37mPpPcsRziA&si=nEdyDQKWEXq0oc8N", extraLinks: [ { id: "playlist_gospel_video_1", name: "Compilação Gospel de Natal", url: "https://youtu.be/ZZgcmdzYrC4?si=L6QTIEsyRpuoq1ww" }, { id: "playlist_gospel_playlist_2", name: "Outra playlist Gospel de Natal", url: "https://youtube.com/playlist?list=PLC7uEPZt0yFgGqULuJ28pYyUZrPXvUPOh&si=Q0M1gtf8V9-1HX8b" } ] },
     { id: "playlist_virada_ano", name: "Virada do Ano", icon: "🎆", description: "Mix de kizomba e semba para receber o Ano Novo.", url: "https://youtu.be/GPSzTCKnsrY?si=SJfZORXxouM1dNyo" }
   ],
   films: [
