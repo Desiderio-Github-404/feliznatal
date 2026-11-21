@@ -27,12 +27,13 @@
     description.textContent = item.description || "";
     const url = safeUrl(item.url);
     const internalBudget = item.id === "bonus_orcamento_sheets";
-    const action = document.createElement(url || internalBudget ? "a" : "span");
-    action.className = "action-link" + (url || internalBudget ? "" : " disabled");
-    action.textContent = internalBudget ? "Planear agora ↓" : (url ? (item.id.startsWith("trailer_") ? "Ver trailer ↗" : "Abrir conteúdo ↗") : "Em breve");
-    if (internalBudget) {
-      action.href = "#orcamento";
-      action.setAttribute("aria-label", "Abrir o planeador de orçamento de Natal");
+    const internalCards = item.id === "bonus_cartoes";
+    const action = document.createElement(url || internalBudget || internalCards ? "a" : "span");
+    action.className = "action-link" + (url || internalBudget || internalCards ? "" : " disabled");
+    action.textContent = internalBudget ? "Planear agora ↓" : internalCards ? "Criar cartão ↓" : (url ? (item.id.startsWith("trailer_") ? "Ver trailer ↗" : "Abrir conteúdo ↗") : "Em breve");
+    if (internalBudget || internalCards) {
+      action.href = internalBudget ? "#orcamento" : "#cartoes";
+      action.setAttribute("aria-label", internalBudget ? "Abrir o planeador de orçamento de Natal" : "Abrir o estúdio de cartões de Natal");
     } else if (url) {
       action.href = url;
       action.target = "_blank";
